@@ -6,7 +6,14 @@
 
 	<managed-bean>
 		<managed-bean-name>bidonBean</managed-bean-name>
-		<managed-bean-class>com.cestpasdur.samples.mavenjsf.managedbeans.BidonBean</managed-bean-class>
+		<managed-bean-class>
+			com.cestpasdur.samples.mavenjsf.managedbeans.BidonBean
+		</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
+
+	<application>
+		<view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
+	</application>
+
 </faces-config>
