@@ -12,6 +12,7 @@
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 
+	<!-- indique que l on utilise facelets comme gestionnaire de vues -->
 	<application>
 		<view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
 	</application>
