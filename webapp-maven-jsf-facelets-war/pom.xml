@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -24,12 +24,14 @@
 		<dependency>
 			<groupId>javax.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>1.2_07</version>
+			<version>${jsf.version}</version>
+             <scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>javax.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>1.2_07</version>
+			<version>${jsf.version}</version>
+            <scope>provided</scope>
 		</dependency>
 
 		
@@ -38,7 +40,7 @@
 		<dependency>
 			<groupId>com.sun.facelets</groupId>
 			<artifactId>jsf-facelets</artifactId>
-			<version>1.1.9</version>
+			<version>1.1.14</version>
 		</dependency>
 	</dependencies>
 
@@ -47,26 +49,20 @@
 	<profiles>
 		<!--  profil permettant de surcharger les scopes lors de la création du war pour jboss  -->
 		<profile>
-			<id>jboss</id>
+			<id>jetty</id>
 			<dependencies>
 				<dependency>
 					<groupId>javax.faces</groupId>
 					<artifactId>jsf-impl</artifactId>
-					<version>1.2_07</version>
-					<scope>provided</scope>
+					<version>${jsf.version}</version>
+					<scope>compile</scope>
 				</dependency>
 				<dependency>
 					<groupId>javax.faces</groupId>
 					<artifactId>jsf-api</artifactId>
-					<version>1.2_07</version>
-					<scope>provided</scope>
+					<version>${jsf.version}</version>
+					<scope>compile</scope>
 				</dependency>
-				<dependency>
-					<artifactId>spring-security-jboss</artifactId>
-					<groupId>org.springframework.security</groupId>
-					<version>2.0.1</version>
-				</dependency>
-
 			</dependencies>
 		</profile>
 	</profiles>
